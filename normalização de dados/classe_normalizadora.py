@@ -82,7 +82,7 @@ class Normalizador():
         colunas = self.ohe_colunas[coluna]
 
         valores_originais = self.df[colunas].idxmax(axis=1) # analisa horizontalmente, qual coluna em cada linha 
-        print(valores_originais)
+    
 
         valores_originais = valores_originais.str.replace(coluna + '_', '') # deixa apenas 'f' ou 'm'
 
@@ -91,6 +91,6 @@ class Normalizador():
 
     def mostrar(self):
         # df é sempre sobrescrito com aplicação dos métodos
-        print(self.df)
+        print(f'{self.df}\n')
 
 
